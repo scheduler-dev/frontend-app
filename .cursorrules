@@ -1,0 +1,30 @@
+# Cursor Rules - Frontend App
+
+## Code Style
+- Use TypeScript strictly — no `any` types
+- Functional components only, hooks for all state
+- Named exports preferred over default exports
+- File names: PascalCase for components, camelCase for utils
+
+## React Patterns
+- Extract business logic into custom hooks
+- Keep components under 150 lines; split if larger
+- Use React.memo() for expensive list items
+- Prefer composition over prop drilling
+
+## State Management
+- Local state: useState/useReducer
+- Server state: React Query (useQuery/useMutation)
+- Global UI state: Zustand (if needed)
+- Avoid Redux unless the team agrees
+
+## Testing
+- Test behavior, not implementation
+- One test file per component/hook
+- Use `userEvent` over `fireEvent` for interactions
+- Mock at the boundary (API calls), not internals
+
+## Performance
+- Lazy load routes with React.lazy()
+- Memoize only when profiler shows it helps
+- Avoid inline object/function creation in render
